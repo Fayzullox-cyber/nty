@@ -1,0 +1,20 @@
+import os
+
+os.makedirs("projects", exist_ok=True)
+
+for i in range(1, 21):
+    filename = f"projects/project{i}.html"
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project {i}</title>
+</head>
+<body>
+  <h1>HTML Project {i}</h1>
+  <p>This is example HTML project number {i}.</p>
+</body>
+</html>""")
+
+print("Все 20 HTML-файлов успешно созданы в папке 'projects'.")
